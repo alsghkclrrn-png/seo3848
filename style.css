@@ -1,1 +1,63 @@
-/* Add styles here */
+body {
+  font-family: 'Gowun Dodum', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+}
+
+main {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#recommend-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#recommend-btn:hover {
+  background-color: #2980b9;
+}
+
+#result-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+#result {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
