@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-adsense-account" content="ca-pub-1969247209463048">
-  <title>오늘의 메뉴</title>
+  <title>오늘의 메뉴 & 동물상 테스트 - 인공지능 분석 서비스</title>
+  <meta name="description" content="인공지능(AI)이 분석해주는 강아지상/고양이상 테스트와 매일 고민되는 점심 메뉴 추천 서비스를 무료로 이용해보세요.">
+  <meta property="og:title" content="오늘의 메뉴 & 동물상 테스트">
+  <meta property="og:description" content="AI 동물상 테스트와 메뉴 추천을 한 곳에서!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
@@ -13,37 +16,57 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">오늘의 메뉴 & AI</a>
+      <ul>
+        <li><a href="#menu-section">메뉴추천</a></li>
+        <li><a href="#animal-test-section">동물상테스트</a></li>
+        <li><a href="#contact-section">제휴문의</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <header>
-    <h1>오늘의 메뉴</h1>
-    <p>버튼을 눌러 당신을 위한 특별한 메뉴를 추천받으세요.</p>
+    <h1>오늘의 메뉴 & AI 동물상 테스트</h1>
+    <p>일상의 작은 고민부터 인공지능 분석까지, 당신을 위한 특별한 서비스를 제공합니다.</p>
   </header>
+
   <main>
+    <!-- 메뉴 추천 섹션 -->
     <section id="menu-section">
-      <button id="recommend-btn">메뉴 추천받기</button>
+      <div class="section-header">
+        <h2>🍔 오늘 뭐 먹지? 점심 메뉴 추천</h2>
+        <p class="section-desc">매일 반복되는 점심 메뉴 고민, 이제 인공지능이 무작위로 맛있는 메뉴를 골라드립니다. 한식, 중식, 일식, 양식 등 다양한 카테고리의 메뉴가 준비되어 있습니다.</p>
+      </div>
+      <button id="recommend-btn">오늘의 메뉴 추천받기</button>
       <div id="result-container">
-          <p id="result"></p>
+          <p id="result">버튼을 눌러 메뉴를 확인하세요!</p>
       </div>
     </section>
 
+    <!-- 동물상 테스트 섹션 -->
     <section id="animal-test-section">
       <hr>
-      <h2>강아지상 vs 고양이상 테스트</h2>
-      <p>사진을 올려주시면 인공지능이 분석해드립니다!</p>
+      <div class="section-header">
+        <h2>🐶 인공지능 동물상 테스트 (강아지 vs 고양이)</h2>
+        <p class="section-desc">Google의 Teachable Machine 기술을 활용하여 당신의 사진을 분석합니다. 강아지상인지 고양이상인지 인공지능이 확률로 알려드립니다. 사진은 서버에 저장되지 않으니 안심하고 테스트해보세요.</p>
+      </div>
       
       <div class="file-upload">
-        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">이미지 업로드</button>
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">사진 업로드하여 분석하기</button>
 
         <div class="image-upload-wrap">
           <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
           <div class="drag-text">
-            <h3>이미지를 드래그하거나 눌러서 업로드하세요</h3>
+            <h3>분석할 사진을 여기에 드래그하거나 클릭하세요</h3>
           </div>
         </div>
         
         <div class="file-upload-content">
-          <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+          <img class="file-upload-image" id="face-image" src="#" alt="분석 이미지" />
           <div class="image-title-wrap">
-            <button type="button" onclick="removeUpload()" class="remove-image">삭제하기</button>
+            <button type="button" onclick="removeUpload()" class="remove-image">사진 삭제 후 다시하기</button>
           </div>
         </div>
       </div>
@@ -51,41 +74,40 @@
       <div id="label-container"></div>
     </section>
 
+    <!-- 제휴 문의 섹션 -->
     <section id="contact-section">
       <hr>
-      <h2>제휴 문의</h2>
+      <div class="section-header">
+        <h2>🤝 비즈니스 및 제휴 문의</h2>
+        <p class="section-desc">서비스 제휴, 광고 문의 또는 기타 피드백이 있으시면 아래 양식을 통해 자유롭게 연락 부탁드립니다. 확인 후 신속하게 답변 드리겠습니다.</p>
+      </div>
       <form action="https://formspree.io/f/xkoqdyjy" method="POST">
         <div class="form-group">
-          <label for="name">성함/기업명</label>
+          <label for="name">성함 또는 기업명</label>
           <input type="text" id="name" name="name" required placeholder="예: 홍길동 / (주)컴퍼니">
         </div>
         <div class="form-group">
-          <label for="email">이메일 주소</label>
+          <label for="email">회신받을 이메일 주소</label>
           <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
         </div>
         <div class="form-group">
-          <label for="message">문의 내용</label>
-          <textarea id="message" name="message" required placeholder="제휴 관련 문의 내용을 입력해주세요."></textarea>
+          <label for="message">문의 상세 내용</label>
+          <textarea id="message" name="message" required placeholder="문의하실 내용을 상세히 적어주시면 정확한 답변이 가능합니다."></textarea>
         </div>
-        <button type="submit" id="submit-btn">문의 보내기</button>
+        <button type="submit" id="submit-btn">제휴 문의 보내기</button>
       </form>
     </section>
 
+    <!-- 댓글 섹션 -->
     <section id="comment-section">
       <hr>
-      <h2>댓글</h2>
+      <div class="section-header">
+        <h2>💬 사용자 소통 공간</h2>
+        <p class="section-desc">서비스에 대한 의견이나 재미있는 결과가 있다면 댓글로 남겨주세요!</p>
+      </div>
       <div id="disqus_thread"></div>
       <script>
-          /**
-          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-          /*
-          var disqus_config = function () {
-          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-          };
-          */
-          (function() { // DON'T EDIT BELOW THIS LINE
+          (function() { 
           var d = document, s = d.createElement('script');
           s.src = 'https://minseoseo.disqus.com/embed.js';
           s.setAttribute('data-timestamp', +new Date());
@@ -95,6 +117,17 @@
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
   </main>
+
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2026 오늘의 메뉴 & AI. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#" onclick="alert('개인정보처리방침: 본 사이트는 사용자의 이미지를 서버에 저장하지 않으며, 분석은 브라우저 내에서만 이루어집니다.')">개인정보처리방침</a>
+        <a href="#contact-section">문의하기</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>

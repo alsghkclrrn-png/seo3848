@@ -38,10 +38,26 @@ async function predict() {
 
     labelContainer.innerHTML = ""; // Clear previous results
 
+    // Add a result summary
+    const topResult = prediction[0];
+    const summaryDiv = document.createElement("div");
+    summaryDiv.style.marginBottom = "1.5rem";
+    summaryDiv.style.fontSize = "1.2rem";
+    summaryDiv.style.fontWeight = "bold";
+    
+    let commentary = "";
+    if (topResult.probability > 0.8) {
+        commentary = `완벽한 ${topResult.className}상이시네요!`;
+    } else if (topResult.probability > 0.5) {
+        commentary = `${topResult.className} 기운이 강하게 느껴집니다.`;
+    } else {
+        commentary = `묘한 매력이 있는 ${topResult.className}상이시군요!`;
+    }
+    
+    summaryDiv.innerHTML = `<span style="color: #3498db;">${commentary}</span>`;
+    labelContainer.appendChild(summaryDiv);
+
     for (let i = 0; i < maxPredictions; i++) {
-        const classPrediction =
-            prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-        
         const probabilityPercent = (prediction[i].probability * 100).toFixed(1);
         
         const barContainer = document.createElement("div");
@@ -56,18 +72,22 @@ async function predict() {
         
         const barFill = document.createElement("div");
         barFill.className = "bar-fill";
-        barFill.style.width = probabilityPercent + "%";
+        barFill.style.width = "0%"; // Initial for animation
         barFill.innerHTML = probabilityPercent + "%";
         
-        // Dynamic color based on class (optional, using default blue for now)
         if (i === 0) {
-             barFill.style.backgroundColor = "#e74c3c"; // Highlight top result
+             barFill.style.background = "linear-gradient(90deg, #e74c3c, #c0392b)";
         }
 
         barWrapper.appendChild(barFill);
         barContainer.appendChild(labelName);
         barContainer.appendChild(barWrapper);
         labelContainer.appendChild(barContainer);
+
+        // Trigger animation
+        setTimeout(() => {
+            barFill.style.width = probabilityPercent + "%";
+        }, 100);
     }
 }
 
