@@ -134,3 +134,164 @@ hr {
   color: #2c3e50;
   margin-bottom: 1.5rem;
 }
+
+/* Animal Face Test Styles */
+#animal-test-section {
+  width: 100%;
+}
+
+.file-upload {
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.file-upload-btn {
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  background: #3498db;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #2980b9;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.file-upload-btn:hover {
+  background: #2980b9;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed #3498db;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+  background-color: #ecf0f1;
+  border: 4px dashed #ffffff;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #222;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.drag-text h3 {
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #3498db;
+  padding: 60px 0;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #cd4535;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #b02818;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+#label-container {
+  margin-top: 1rem;
+}
+
+.label-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.label-name {
+  width: 20%;
+  text-align: left;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.bar-wrapper {
+  width: 80%;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #3498db;
+  text-align: right;
+  padding-right: 5px;
+  color: white;
+  font-size: 0.8rem;
+  line-height: 20px;
+  transition: width 0.5s ease-in-out;
+}
