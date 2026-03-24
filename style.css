@@ -123,3 +123,14 @@ hr {
 #submit-btn:hover {
   background-color: #219150;
 }
+
+#comment-section {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+#comment-section h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
