@@ -10,6 +10,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   text-align: center;
+  padding: 2rem 0;
 }
 
 header {
@@ -32,6 +33,8 @@ main {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
 }
 
 #recommend-btn {
@@ -60,4 +63,63 @@ main {
   font-size: 1.5rem;
   font-weight: bold;
   color: #2c3e50;
+  margin: 0;
+}
+
+/* Contact Form Styles */
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 2rem 0;
+}
+
+#contact-section h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dcdde1;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+#submit-btn {
+  width: 100%;
+  background-color: #27ae60;
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+#submit-btn:hover {
+  background-color: #219150;
 }
